@@ -14,8 +14,12 @@ def baixar_arquivos():
 
     # Data e nome do arquivo que será baixado
     data_atual = datetime.today()
-    dia_anterior = data_atual - timedelta(1)
+    dia_anterior = data_atual - timedelta(6)
     data_nome = dia_anterior.strftime('%Y%m%d')
+
+    # log
+    print(data_atual.strftime('%d/%m/%Y %H:%M:%S') +
+          ' - Processo de download do arquivo ROCR iniciado.')
 
     # Acessando o site e baixando os arquivos
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))

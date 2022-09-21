@@ -14,7 +14,7 @@ def baixar_arquivos():
 
     # Data e nome do arquivo que será baixado
     data_atual = datetime.today()
-    dia_anterior = data_atual - timedelta(1)
+    dia_anterior = data_atual - timedelta(6)
     data_nome = dia_anterior.strftime('%Y%m%d')
 
     # Acessando o site e baixando os arquivos
